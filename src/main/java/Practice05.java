@@ -1,0 +1,32 @@
+public class Practice05 {
+
+    Practice04 repo;
+
+    public Practice05(Practice04 repo) {
+        this.repo = repo;
+    }
+    public void addDeveloper(String name) {
+        repo.add(name);
+        System.out.println("developer eklendi");
+    }
+
+    public void removeDeveloper(String name) {
+        String found= repo.findByName(name);
+        repo.remove(found);
+        System.out.println("developer silindi");
+    }
+
+    public void removeAllDeveloper(){
+        repo.removeAll();
+        System.out.println("tüm developerlar silindi");
+    }
+
+
+    public void sizeOfDevs() {
+        repo.sizeOfDevs();
+        System.out.println("tüm developerların sayısı:"+repo.sizeOfDevs());
+    }
+
+
+}
+
